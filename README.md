@@ -47,6 +47,7 @@ CheckMate is a web-based platform designed to streamline hostel room inspections
 - VS Code (or any code editor)
 
 ### 📦 Install Dependencies
+create a venv environment before installing any dependencies...
 
 ```bash
 pip install flask flask_pymongo werkzeug
