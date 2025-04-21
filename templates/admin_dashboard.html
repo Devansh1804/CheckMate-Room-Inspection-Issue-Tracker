@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard - CheckMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_styles.css') }}">
+</head>
+<body>
+    <div class="header">
+        <h2>Welcome, Admin</h2>
+        <a href="{{ url_for('logout') }}">Logout</a>
+    </div>
+
+    <div class="container">
+        <div class="issue-list">
+            <h3>All Submitted Issues</h3>
+
+            {% for issue in issues %}
+            <div class="issue">
+                <p><strong>Room:</strong> {{ issue.location }}</p>
+                <p><strong>User:</strong> {{ issue.username }}</p>
+                <p><strong>Status:</strong> {{ issue.status }}</p>
+
+                {% if issue.photo %}
+                    <img src="{{ url_for('static', filename='uploads/' ~ issue.photo) }}" alt="Issue Photo">
+                {% endif %}
+
+                <div class="issue-description">
+                    {{ issue.description }}
+                </div>
+
+                <form method="POST" action="{{ url_for('update_status', issue_id=issue._id) }}">
+                    <label for="status">Update Status:</label>
+                    <select name="status">
+                        <option value="Pending" {% if issue.status == "Pending" %}selected{% endif %}>Pending</option>
+                        <option value="In Progress" {% if issue.status == "In Progress" %}selected{% endif %}>In Progress</option>
+                        <option value="Resolved" {% if issue.status == "Resolved" %}selected{% endif %}>Resolved</option>
+                    </select>
+                    <button type="submit">Update</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

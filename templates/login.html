@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login | CheckMate</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <h2>Login</h2>
+
+            {% if error %}
+                <p class="error">{{ error }}</p>
+            {% endif %}
+
+            <form action="{{ url_for('login') }}" method="POST">
+                <label>Username</label>
+                <div class="input-group">
+                    <span class="icon">👤</span>
+                    <input type="email" name="email" placeholder="Type your username" required>
+                </div>
+
+                <label>Password</label>
+                <div class="input-group">
+                    <span class="icon">🔒</span>
+                    <input type="password" name="password" placeholder="Type your password" required>
+                </div>
+
+                <div class="forgot">
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit">Login</button>
+            </form>
+
+            <!-- Register Section -->
+            <div class="register-section">
+                <p>Don't have an account?</p>
+                <a href="{{ url_for('register') }}" class="register-btn">Register</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

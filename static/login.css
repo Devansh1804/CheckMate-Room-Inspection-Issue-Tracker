@@ -1,0 +1,137 @@
+/* Gradient background */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container for the card */
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+/* Card */
+.login-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+/* Heading */
+.login-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Input styling */
+.input-group {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: #f9f9f9;
+}
+
+.input-group .icon {
+    margin-right: 10px;
+    color: #888;
+    font-size: 18px;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Label */
+label {
+    text-align: left;
+    display: block;
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+/* Forgot password */
+.forgot {
+    text-align: right;
+    margin-bottom: 25px;
+}
+
+.forgot a {
+    color: #888;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(to right, #6ee2f5, #6454f0);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #57c0e8, #553cf1);
+}
+
+/* Error message */
+.error {
+    color: red;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.register-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-section p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.register-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+    background: linear-gradient(to right, #f94fad, #635bf3);
+}
+

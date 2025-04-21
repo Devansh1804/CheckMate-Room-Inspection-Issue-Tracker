@@ -1,0 +1,78 @@
+/* Background gradient */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Register box */
+.register-box {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+/* Heading */
+.register-box h2 {
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Labels & Inputs */
+.register-box label {
+    display: block;
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.register-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+
+/* Button */
+.register-box button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.register-box button:hover {
+    background: linear-gradient(to right, #f94fad, #635bf3);
+}
+
+/* Link to login */
+.register-box p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.register-box a {
+    color: #635bf3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-box a:hover {
+    text-decoration: underline;
+}
